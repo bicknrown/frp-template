@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>frp</Name>
+  <Repository>bicknrown/frp</Repository>
+  <Registry>https://hub.docker.com/r/bicknrown/frp</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/bicknrown/frp</Support>
+  <Project>https://github.com/fatedier/frp</Project>
+  <Overview>Fast Reverse Proxy, wrapped for unraid</Overview>
+  <Category>Network:Proxy</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1621706706</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Fast Reverse Proxy, wrapped for unraid</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>0.36.2</Value>
+      <Name>FRP_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/etc/frp/</Value>
+      <Name>CONFIG_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>client</Value>
+      <Name>SERVER_OR_CLIENT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SERVER_ADDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SERVER_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BIND_ADDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BIND_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>AUTHENTICATE_HEARTBEATS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>AUTHENTICATION_METHOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TCP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TCP_RANGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UDP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UDP_RANGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TCP_LOCAL_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TCP_LOCAL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TCP_REMOTE_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UDP_LOCAL_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UDP_LOCAL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UDP_REMOTE_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="FRP Version" Target="FRP_VERSION" Default="0.36.2" Mode="" Description="Version of FRP to use (amd 64)" Type="Variable" Display="always" Required="true" Mask="false">0.36.2</Config>
+  <Config Name="FRP config path" Target="CONFIG_PATH" Default="/etc/frp/" Mode="" Description="FRP client/server config path (leave this alone unless you know what you are doing)" Type="Variable" Display="always" Required="true" Mask="false">/etc/frp/</Config>
+  <Config Name="Server / Client selection" Target="SERVER_OR_CLIENT" Default="client" Mode="" Description="Configures whether or not FRP is acting as a server or client (" Type="Variable" Display="always" Required="true" Mask="false">client</Config>
+  <Config Name="Server Address (Client Mode)" Target="SERVER_ADDR" Default="" Mode="" Description="Sets remote server address when in client mode" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Server Port (Client Mode)" Target="SERVER_PORT" Default="" Mode="" Description="Sets port for remote server in client mode" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Bind Address (Server Mode)" Target="BIND_ADDR" Default="" Mode="" Description="Sets bind address in server mode" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Bind Port (Server Mode)" Target="BIND_PORT" Default="" Mode="" Description="Sets bind port in server mode" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Authenticate Heartbeats" Target="AUTHENTICATE_HEARTBEATS" Default="false" Mode="" Description="Sets whether or not the server/client will authenticate on heartbeat (true/false)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Authentication Method" Target="AUTHENTICATION_METHOD" Default="" Mode="" Description="Sets which method to use for authentication" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Sets token for authentication (if enabled)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable TCP (Client Mode)" Target="TCP" Default="false" Mode="" Description="Enables tcp in client mode (true/false)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable TCP Range Mode (Client Mode)" Target="TCP_RANGE" Default="false" Mode="" Description="Sets whether to treat TCP port as a single port or range (true/false)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable UDP (Client Mode)" Target="UDP" Default="false" Mode="" Description="Enabled UDP in client mode (true/false)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable UDP Range Mode (Client Mode)" Target="UDP_RANGE" Default="false" Mode="" Description="Sets whether to treat UDP port as a single port or range (true/false)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP Local IP (Client Mode)" Target="TCP_LOCAL_IP" Default="" Mode="" Description="Sets local host ip for TCP proxying" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP Local Port(s) (Client Mode)" Target="TCP_LOCAL_PORT" Default="" Mode="" Description="Sets TCP Port in client mode, can be range" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP Remote Port (Client Mode)" Target="TCP_REMOTE_PORT" Default="" Mode="" Description="Sets TCP remote port on server in client mode, can be range" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP Local IP (Client Mode)" Target="UDP_LOCAL_IP" Default="" Mode="" Description="Sets UDP local IP in client mode" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP Local Port (Client Mode)" Target="UDP_LOCAL_PORT" Default="" Mode="" Description="Sets UDP local port in client mode, can be range" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP Remote Port (Client Mode)" Target="UDP_REMOTE_PORT" Default="" Mode="" Description="Sets UDP remote port on the server in client mode, can be range" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
